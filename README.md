@@ -75,7 +75,7 @@ For the development mode, the following instructions are mandatory:
 To create a file called .env in the root of your project and  define environment variables:
 ```
 REACT_APP_LOGIN = GithubUsername   
-github_token = GithubToken //  Generate a personal access token 
+REACT_APP_TOKEN = GithubToken //  Personal access token generated 
 ```
 To Runs the app in the development mode.<br />
 
