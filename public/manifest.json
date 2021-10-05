@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Trending Repos",
+  "name": "Trending Repos",
   "icons": [
     {
       "src": "favicon.ico",
