@@ -72,7 +72,7 @@ For the development mode, the following instructions are mandatory:
 `$ cd gemography_challenge`<br />
 `$ npm install`<br />
 
-To create a file called .env in the root of your project and  define environment variables:
+Create a file called .env in the root of your project and  define environment variables:
 ```
 REACT_APP_LOGIN = GithubUsername   
 REACT_APP_TOKEN = GithubToken //  Personal access token generated 
