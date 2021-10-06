@@ -1,14 +1,30 @@
+/**
+ *  @author DJIMNAIBEYE Sidoine
+ */
 import React from 'react'
 import { Box,Heading, Stack, Image } from "@chakra-ui/react"
 
-
+/**
+ * Detection the end of scroll
+ * Returns the number of days between date now and param date.
+ * @param {Date} date
+ */
 const numberDay = (date) => {
     const dateNow = Date.now()
     const dateCreated = new Date(date)
     const days = Math.trunc((dateNow - dateCreated) / (1000 * 3600 * 24))
     return days
 }
-const ReposCard = ({ item } ) => {
+/**
+ * Composant render the repository details :
+ *   Repository name
+ *   Repository description
+ *   Number of stars for the repo.
+ *   Number of issues for the repo.
+ *  Username and avatar of the owner.
+ *  @param {repos} Object
+ */
+const ReposCard = ({ repos } ) => {
     return (
         <>
             <Box p={5} >
@@ -17,26 +33,26 @@ const ReposCard = ({ item } ) => {
                     <Image
                         w="100px"
                         objectFit="cover"
-                        src={item.owner.avatar_url}
-                        alt={item.name}
+                        src={repos.owner.avatar_url}
+                        alt={repos.name}
                     />
                     </Box>
                     <Box w="auto">
                     <Stack direction="column">
                         <Box>
-                        <Heading as="h4" size="sm"> {item.name} </Heading>
+                        <Heading as="h4" size="sm"> {repos.name} </Heading>
                         </Box>
                         <Box>
-                        {item.description}
+                        {repos.description}
                         </Box>
                         <Stack direction="row">  
                         <Box  shadow="md" px={5}>
-                        Stars: {item.stargazers_count} 
+                        Stars: {repos.stargazers_count} 
                         </Box>
                         <Box shadow="md" px={5}>
-                        Issues: {item.open_issues_count} 
+                        Issues: {repos.open_issues_count} 
                         </Box>
-                        <Box>Submitted { numberDay(item.created_at)>1? `${numberDay(item.created_at)} days`: `one day`} ago by   {item.owner.login}
+                        <Box>Submitted { numberDay(repos.created_at)>1? `${numberDay(repos.created_at)} days`: `one day`} ago by   {repos.owner.login}
                         </Box>
                         </Stack>
                     </Stack>

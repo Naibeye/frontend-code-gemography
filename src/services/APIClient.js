@@ -1,11 +1,21 @@
+/**
+ *  @author DJIMNAIBEYE Sidoine
+ */
+
 import axios from 'axios';
 import { encode as base64_encode} from 'base-64';
 
 
 const API_PATH = '/search';
+/**
+ * using GitHub Basic Authentication to make up to 30 requests per minute
+ */
 const encoded = base64_encode(`${process.env.REACT_APP_LOGIN}:${process.env.REACT_APP_TOKEN}`);
 const headers = {"Authorization":`Basic ${encoded}`}
 
+/**
+ * Client service class
+ */
 export default class APIClient {
     constructor() {
         this.client = axios.create({
