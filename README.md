@@ -90,7 +90,7 @@ Builds  for production to the `build` folder.<br />
 ***
 DJIMNAIBEYE Sidoine- [@djimnaibeye-sidoine-6a332a36](https://www.linkedin.com/in/djimnaibeye-sidoine-6a332a36/) - dthekplus@gmail.com
 
-Project Link: [https://github.com/Naibeye/gemography](https://github.com/Naibeye/gemography)
+Project Link: [https://github.com/Naibeye/frontend-code-gemography](https://github.com/Naibeye/gemography)
 
 
 
